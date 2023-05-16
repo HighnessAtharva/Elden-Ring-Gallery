@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Elden Ring Gallery</title>
+	<meta name="description" content="Some grid animation effects using anime.js" />
+	<meta name="keywords" content="grid, animation, effect, anime.js, elden ring, web design, javascript" />
+	<meta name="author" content="Atharva Shah" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://use.typekit.net/aku8mpq.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+</head>
+<body class="demo-1 loading">
+	<div class="hidden">
+		<!-- 💡💡💡💡💡 Rendering contents with JS-->
+		<!-- <img src="img/large/1.jpg" /> -->
+	</div>
+	<main>
+		<div class="frame">
+			<div class="frame__title-wrap">
+				<h1 class="frame__title"><a href="https://github.com/HighnessAtharva">Design by Atharva Shah</a></h1>
+			</div>
+			<span class="frame__main">Elden Ring</span>
+			<span class="frame__version"><a href="https://www.instagram.com/drakkar2guerre/">Illustrations by Drakkar2Guerre</a></span>
+		</div>
+		<div class="content">
+			<h2 class="content__title">Elden Ring</h2>
+		</div>
+		<div class="grid-wrap">
+			<div class="grid">
+				<!--💡💡💡💡 Rendering contents with JS-->
+				<!-- 
+					<div class="grid__item" data-title="London">
+						<div class="grid__item-inner" style="background-image:url(img/1.jpg)"></div>
+					</div>
+				-->
+			</div>
+		</div>
+		</div>
+	</main>
+	<div class="cursor">
+		<div class="cursor__inner cursor__inner--circle"></div>
+		<span class="cursor__inner cursor__inner--text">&nbsp;</span>
+	</div>
+	<script>
+		//get div with class hidden
+		var hidden = document.getElementsByClassName('hidden')[0];
+
+		// add img tag child to div with class hidden
+		for (var i = 1; i < 176; i++) {
+			var img = document.createElement('img');
+			img.src = 'img/large/' + i + '.jpg';
+			hidden.appendChild(img);
+		}
+
+		//make an array of text for each image of length 176 and it should contain the text of the image
+		// Add text to each image
+		var text = [];
+		for (var i = 0; i <= 176; i++) {
+			text.push('Image ' + i);
+		}
+
+		// Get the div with class "grid"
+		var grid = document.getElementsByClassName('grid')[0];
+
+		// Generate the grid items using a loop
+		for (var i = 1; i <= 176; i++) {
+			// Create the grid item element
+			var gridItem = document.createElement('div');
+			gridItem.className = 'grid__item';
+			gridItem.setAttribute('data-title', text[i]);
+
+			// Create the grid item inner element
+			var gridItemInner = document.createElement('div');
+			gridItemInner.className = 'grid__item-inner';
+			gridItemInner.style.backgroundImage = 'url(img/' + i + '.jpg)';
+
+			// Append the grid item inner element to the grid item element
+			gridItem.appendChild(gridItemInner);
+
+			// Append the grid item element to the grid container
+			grid.appendChild(gridItem);
+		}
+
+
+	</script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/anime.min.js"></script>
+	<script src="js/demo1.js"></script>
+</body>
+</html>
