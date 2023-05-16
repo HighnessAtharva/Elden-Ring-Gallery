@@ -14,7 +14,7 @@ body {
 	--color-bg: #000;
 	--color-link: #5a45a0;
 	--color-link-hover: #fff;
-	--color-bg-content: #5b6598;
+	--color-bg-content: #6786b8;
 	--color-title: #fff;
 	color: var(--color-text);
 	background-color: var(--color-bg);
@@ -186,7 +186,6 @@ a:focus {
 	align-items: center;
 	justify-content: center;
 	background-position: 50% 30%;
-	background-size: cover;
 	background-blend-mode: soft-light;
 	cursor: pointer;
 }
@@ -234,7 +233,7 @@ a:focus {
 	cursor: pointer;
 	overflow: hidden;
 	height: var(--cell-size);
-	outline: 1px solid rgba(0,0,0,0.87);
+	outline: 1px solid rgba(0,0,0,0.8);
 }
 
 .grid__item-inner {
@@ -261,7 +260,7 @@ a:focus {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,0.87);
+	background: rgba(0,0,0,0.8);
 	transition: background 0.1s ease;
 }
 
@@ -270,7 +269,7 @@ a:focus {
 }
 
 .grid__item-inner:hover::after {
-	background: rgba(0,0,0,0.77);
+	background: rgba(0,0,0,0.5);
 }
 
 .demo-4 .grid__item-inner:hover::after {
